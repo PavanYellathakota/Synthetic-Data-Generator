@@ -1,0 +1,29 @@
+### 🔹 `.gitignore`
+```gitignore
+# Python environment
+venv/
+__pycache__/
+*.py[cod]
+
+# Streamlit cache
+.streamlit/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Exported data
+/export/*.csv
+/export/*.json
+/export/*.xlsx
+/export/*.sql
+```
+
+### ✅ Future Extensions
+- Multi-table schema support
+- SQL FK relationships
+- Row/column logic across tables
+- ZIP export for entire database mocks

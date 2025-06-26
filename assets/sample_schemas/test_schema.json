@@ -1,0 +1,50 @@
+{
+  "columns": [
+    {
+      "name": "user_id",
+      "type": "Integer",
+      "range": [1000, 9999],
+      "unique": true
+    },
+    {
+      "name": "age",
+      "type": "Integer",
+      "range": [18, 65]
+    },
+    {
+      "name": "country",
+      "type": "Categorical",
+      "categories": ["USA", "India", "Germany"],
+      "weights": [0.5, 0.3, 0.2]
+    },
+    {
+      "name": "email",
+      "type": "PII",
+      "subtype": "email"
+    },
+    {
+      "name": "alcohol_access",
+      "type": "Conditional",
+      "logic": "age >= 21"
+    }
+  ],
+  "dependencies": [
+    {
+      "target": "alcohol_access",
+      "condition": "age < 21",
+      "value": "Not Allowed"
+    },
+    {
+      "target": "alcohol_access",
+      "condition": "age >= 21",
+      "value": "Allowed"
+    }
+  ],
+  "options": {
+    "distribution": "Uniform",
+    "null_percentage": 0,
+    "outlier_percentage": 0,
+    "enable_pii": true,
+    "locale": "en_US"
+  }
+}
