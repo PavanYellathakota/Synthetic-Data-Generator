@@ -33,8 +33,8 @@ from ui.column_builder import column_builder_ui
 schema["columns"] = column_builder_ui(schema.get("columns", []))
 
 # Advanced Logic UI
-from ui.advanced_logic import advanced_logic_ui
-schema = advanced_logic_ui(schema)
+# from ui.advanced_logic import advanced_logic_ui
+# schema = advanced_logic_ui(schema)
 
 # PII Toggle & Distribution Settings
 from ui.options_panel import options_panel_ui
