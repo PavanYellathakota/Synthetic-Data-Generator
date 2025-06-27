@@ -10,6 +10,16 @@ import pandas as pd
 st.set_page_config(page_title="Synthetic Data Generator", layout="wide")
 st.title("🧪 Synthetic Data Generator")
 
+st.markdown("""
+Welcome to **FreeData** – your personal playground for generating synthetic datasets and unleashing data creativity.
+
+Whether you're a curious beginner or a seasoned analyst, this tool empowers you to **cook your own data**, test ideas, build models, and **flex your analytics muscle** — no real data required.
+
+Don’t let the explorer in you fade. Stick around... something better is always cooking.
+
+📄 [View Documentation](https://github.com/PavanYellathakota/Synthetic-Data-Generator/blob/main/README.md)
+""")
+
 # Sidebar Configuration
 st.sidebar.header("Dataset Configuration")
 dataset_name = st.sidebar.text_input("Dataset Name", value="my_dataset")
@@ -69,3 +79,6 @@ if st.button("✅ Generate Preview"):
 if st.sidebar.button("💾 Save Schema"):
     save_schema(schema, f"assets/sample_schemas/{dataset_name}_schema.json")
     st.sidebar.success("Schema saved!")
+
+
+st.markdown(""" ✉️ Created by: *pavan.yellathakota.ds@gmail.com*""")
