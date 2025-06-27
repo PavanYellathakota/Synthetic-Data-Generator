@@ -9,7 +9,7 @@ PII_TYPES = ["name", "email", "phone", "address"]
 
 
 def column_builder_ui(columns_config):
-    st.markdown("### 🧩 Define Schema Columns (Editable Table)")
+    # st.markdown("### 🧩 Define Schema Columns (Editable Table)")
 
     num_cols = st.number_input("How many columns do you want to define?", min_value=1, max_value=50, value=len(columns_config) or 4)
 
